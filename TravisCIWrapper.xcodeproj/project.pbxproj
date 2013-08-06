@@ -16,9 +16,35 @@
 		6D5CEDE117B136FB0014EAB1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D5CEDE017B136FB0014EAB1 /* Default.png */; };
 		6D5CEDE317B136FB0014EAB1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D5CEDE217B136FB0014EAB1 /* Default@2x.png */; };
 		6D5CEDE517B136FB0014EAB1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D5CEDE417B136FB0014EAB1 /* Default-568h@2x.png */; };
+		6D5CEDF017B13A640014EAB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5CEDCE17B136FB0014EAB1 /* UIKit.framework */; };
+		6D5CEDF117B13A640014EAB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5CEDD017B136FB0014EAB1 /* Foundation.framework */; };
+		6D5CEDF217B13A640014EAB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5CEDD217B136FB0014EAB1 /* CoreGraphics.framework */; };
+		6D5CEDF817B13A640014EAB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D5CEDF617B13A640014EAB1 /* InfoPlist.strings */; };
+		6D5CEDFA17B13A640014EAB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEDF917B13A640014EAB1 /* main.m */; };
+		6D5CEE0017B13A640014EAB1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D5CEDFF17B13A640014EAB1 /* Default.png */; };
+		6D5CEE0217B13A640014EAB1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D5CEE0117B13A640014EAB1 /* Default@2x.png */; };
+		6D5CEE0417B13A640014EAB1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D5CEE0317B13A640014EAB1 /* Default-568h@2x.png */; };
+		6D5CEE0B17B13DC60014EAB1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5CEE0A17B13DC60014EAB1 /* QuartzCore.framework */; };
+		6D5CEE0F17B13EB60014EAB1 /* TWRestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE0E17B13EB60014EAB1 /* TWRestAPI.m */; };
+		6D5CEE1017B13EB60014EAB1 /* TWRestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE0E17B13EB60014EAB1 /* TWRestAPI.m */; };
+		6D5CEE1317B13ECE0014EAB1 /* TWRestDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE1217B13ECE0014EAB1 /* TWRestDefines.m */; };
+		6D5CEE1417B13ECE0014EAB1 /* TWRestDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE1217B13ECE0014EAB1 /* TWRestDefines.m */; };
+		6D5CEE1717B13F410014EAB1 /* TWRestHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE1617B13F410014EAB1 /* TWRestHTTPClient.m */; };
+		6D5CEE1817B13F410014EAB1 /* TWRestHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE1617B13F410014EAB1 /* TWRestHTTPClient.m */; };
+		6D5CEE1C17B1900E0014EAB1 /* TWRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE1B17B1900E0014EAB1 /* TWRepo.m */; };
+		6D5CEE1D17B1900E0014EAB1 /* TWRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE1B17B1900E0014EAB1 /* TWRepo.m */; };
+		6D5CEE2117B199320014EAB1 /* TWParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE2017B199320014EAB1 /* TWParser.m */; };
+		6D5CEE2217B199320014EAB1 /* TWParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE2017B199320014EAB1 /* TWParser.m */; };
+		6D5CEE2517B1996A0014EAB1 /* TWRepoCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE2417B1996A0014EAB1 /* TWRepoCollection.m */; };
+		6D5CEE2617B1996A0014EAB1 /* TWRepoCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE2417B1996A0014EAB1 /* TWRepoCollection.m */; };
+		E9D11346C71849BCB17F62C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32004CC9230D4A9F94CF10D6 /* libPods.a */; };
+		F376210534D54D0E81662040 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5289ED9F43EE436681811220 /* libPods-test.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32004CC9230D4A9F94CF10D6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9ED187ED5A499AAD7FFDEE /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
+		5289ED9F43EE436681811220 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5CEDCB17B136FB0014EAB1 /* TravisCIWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravisCIWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5CEDCE17B136FB0014EAB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6D5CEDD017B136FB0014EAB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -32,6 +58,28 @@
 		6D5CEDE017B136FB0014EAB1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6D5CEDE217B136FB0014EAB1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6D5CEDE417B136FB0014EAB1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6D5CEDEF17B13A640014EAB1 /* TravisCIWrapperTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravisCIWrapperTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D5CEDF517B13A640014EAB1 /* TravisCIWrapperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TravisCIWrapperTests-Info.plist"; sourceTree = "<group>"; };
+		6D5CEDF717B13A640014EAB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6D5CEDF917B13A640014EAB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D5CEDFB17B13A640014EAB1 /* TravisCIWrapperTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TravisCIWrapperTests-Prefix.pch"; sourceTree = "<group>"; };
+		6D5CEDFF17B13A640014EAB1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6D5CEE0117B13A640014EAB1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6D5CEE0317B13A640014EAB1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6D5CEE0A17B13DC60014EAB1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6D5CEE0D17B13EB60014EAB1 /* TWRestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRestAPI.h; sourceTree = "<group>"; };
+		6D5CEE0E17B13EB60014EAB1 /* TWRestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRestAPI.m; sourceTree = "<group>"; };
+		6D5CEE1117B13ECE0014EAB1 /* TWRestDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRestDefines.h; sourceTree = "<group>"; };
+		6D5CEE1217B13ECE0014EAB1 /* TWRestDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRestDefines.m; sourceTree = "<group>"; };
+		6D5CEE1517B13F410014EAB1 /* TWRestHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRestHTTPClient.h; sourceTree = "<group>"; };
+		6D5CEE1617B13F410014EAB1 /* TWRestHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRestHTTPClient.m; sourceTree = "<group>"; };
+		6D5CEE1A17B1900E0014EAB1 /* TWRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRepo.h; sourceTree = "<group>"; };
+		6D5CEE1B17B1900E0014EAB1 /* TWRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRepo.m; sourceTree = "<group>"; };
+		6D5CEE1F17B199320014EAB1 /* TWParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWParser.h; sourceTree = "<group>"; };
+		6D5CEE2017B199320014EAB1 /* TWParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWParser.m; sourceTree = "<group>"; };
+		6D5CEE2317B1996A0014EAB1 /* TWRepoCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRepoCollection.h; sourceTree = "<group>"; };
+		6D5CEE2417B1996A0014EAB1 /* TWRepoCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRepoCollection.m; sourceTree = "<group>"; };
+		C05377ED74EE40E78F31EAA5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +90,19 @@
 				6D5CEDCF17B136FB0014EAB1 /* UIKit.framework in Frameworks */,
 				6D5CEDD117B136FB0014EAB1 /* Foundation.framework in Frameworks */,
 				6D5CEDD317B136FB0014EAB1 /* CoreGraphics.framework in Frameworks */,
+				E9D11346C71849BCB17F62C4 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D5CEDEC17B13A640014EAB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D5CEE0B17B13DC60014EAB1 /* QuartzCore.framework in Frameworks */,
+				6D5CEDF017B13A640014EAB1 /* UIKit.framework in Frameworks */,
+				6D5CEDF117B13A640014EAB1 /* Foundation.framework in Frameworks */,
+				6D5CEDF217B13A640014EAB1 /* CoreGraphics.framework in Frameworks */,
+				F376210534D54D0E81662040 /* libPods-test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +113,11 @@
 			isa = PBXGroup;
 			children = (
 				6D5CEDD417B136FB0014EAB1 /* TravisCIWrapper */,
+				6D5CEDF317B13A640014EAB1 /* TravisCIWrapperTests */,
 				6D5CEDCD17B136FB0014EAB1 /* Frameworks */,
 				6D5CEDCC17B136FB0014EAB1 /* Products */,
+				C05377ED74EE40E78F31EAA5 /* Pods.xcconfig */,
+				3B9ED187ED5A499AAD7FFDEE /* Pods-test.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				6D5CEDCB17B136FB0014EAB1 /* TravisCIWrapper.app */,
+				6D5CEDEF17B13A640014EAB1 /* TravisCIWrapperTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,9 +133,12 @@
 		6D5CEDCD17B136FB0014EAB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D5CEE0A17B13DC60014EAB1 /* QuartzCore.framework */,
 				6D5CEDCE17B136FB0014EAB1 /* UIKit.framework */,
 				6D5CEDD017B136FB0014EAB1 /* Foundation.framework */,
 				6D5CEDD217B136FB0014EAB1 /* CoreGraphics.framework */,
+				32004CC9230D4A9F94CF10D6 /* libPods.a */,
+				5289ED9F43EE436681811220 /* libPods-test.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -78,6 +146,7 @@
 		6D5CEDD417B136FB0014EAB1 /* TravisCIWrapper */ = {
 			isa = PBXGroup;
 			children = (
+				6D5CEE0C17B13E870014EAB1 /* Framework */,
 				6D5CEDDD17B136FB0014EAB1 /* TWAppDelegate.h */,
 				6D5CEDDE17B136FB0014EAB1 /* TWAppDelegate.m */,
 				6D5CEDD517B136FB0014EAB1 /* Supporting Files */,
@@ -99,6 +168,63 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6D5CEDF317B13A640014EAB1 /* TravisCIWrapperTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D5CEDF417B13A640014EAB1 /* Supporting Files */,
+			);
+			path = TravisCIWrapperTests;
+			sourceTree = "<group>";
+		};
+		6D5CEDF417B13A640014EAB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D5CEDF517B13A640014EAB1 /* TravisCIWrapperTests-Info.plist */,
+				6D5CEDF617B13A640014EAB1 /* InfoPlist.strings */,
+				6D5CEDF917B13A640014EAB1 /* main.m */,
+				6D5CEDFB17B13A640014EAB1 /* TravisCIWrapperTests-Prefix.pch */,
+				6D5CEDFF17B13A640014EAB1 /* Default.png */,
+				6D5CEE0117B13A640014EAB1 /* Default@2x.png */,
+				6D5CEE0317B13A640014EAB1 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6D5CEE0C17B13E870014EAB1 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				6D5CEE1E17B199170014EAB1 /* Parser */,
+				6D5CEE1917B18FD40014EAB1 /* Models */,
+				6D5CEE0D17B13EB60014EAB1 /* TWRestAPI.h */,
+				6D5CEE0E17B13EB60014EAB1 /* TWRestAPI.m */,
+				6D5CEE1117B13ECE0014EAB1 /* TWRestDefines.h */,
+				6D5CEE1217B13ECE0014EAB1 /* TWRestDefines.m */,
+				6D5CEE1517B13F410014EAB1 /* TWRestHTTPClient.h */,
+				6D5CEE1617B13F410014EAB1 /* TWRestHTTPClient.m */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		6D5CEE1917B18FD40014EAB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6D5CEE1A17B1900E0014EAB1 /* TWRepo.h */,
+				6D5CEE1B17B1900E0014EAB1 /* TWRepo.m */,
+				6D5CEE2317B1996A0014EAB1 /* TWRepoCollection.h */,
+				6D5CEE2417B1996A0014EAB1 /* TWRepoCollection.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6D5CEE1E17B199170014EAB1 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				6D5CEE1F17B199320014EAB1 /* TWParser.h */,
+				6D5CEE2017B199320014EAB1 /* TWParser.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D5CEDE817B136FB0014EAB1 /* Build configuration list for PBXNativeTarget "TravisCIWrapper" */;
 			buildPhases = (
+				F7F49A3F29A44312BACA180F /* Check Pods Manifest.lock */,
 				6D5CEDC717B136FB0014EAB1 /* Sources */,
 				6D5CEDC817B136FB0014EAB1 /* Frameworks */,
 				6D5CEDC917B136FB0014EAB1 /* Resources */,
+				3E68CF4F307047AEAB7B4BB1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -117,6 +245,25 @@
 			name = TravisCIWrapper;
 			productName = TravisCIWrapper;
 			productReference = 6D5CEDCB17B136FB0014EAB1 /* TravisCIWrapper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6D5CEDEE17B13A640014EAB1 /* TravisCIWrapperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D5CEE0717B13A640014EAB1 /* Build configuration list for PBXNativeTarget "TravisCIWrapperTests" */;
+			buildPhases = (
+				4E6F2C0D96A845A7A23F46A6 /* Check Pods Manifest.lock */,
+				6D5CEDEB17B13A640014EAB1 /* Sources */,
+				6D5CEDEC17B13A640014EAB1 /* Frameworks */,
+				6D5CEDED17B13A640014EAB1 /* Resources */,
+				31C6FB103849491B8C1A988C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TravisCIWrapperTests;
+			productName = TravisCIWrapperTests;
+			productReference = 6D5CEDEF17B13A640014EAB1 /* TravisCIWrapperTests.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -142,6 +289,7 @@
 			projectRoot = "";
 			targets = (
 				6D5CEDCA17B136FB0014EAB1 /* TravisCIWrapper */,
+				6D5CEDEE17B13A640014EAB1 /* TravisCIWrapperTests */,
 			);
 		};
 /* End PBXProject section */
@@ -158,7 +306,81 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6D5CEDED17B13A640014EAB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D5CEDF817B13A640014EAB1 /* InfoPlist.strings in Resources */,
+				6D5CEE0017B13A640014EAB1 /* Default.png in Resources */,
+				6D5CEE0217B13A640014EAB1 /* Default@2x.png in Resources */,
+				6D5CEE0417B13A640014EAB1 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31C6FB103849491B8C1A988C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E68CF4F307047AEAB7B4BB1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E6F2C0D96A845A7A23F46A6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7F49A3F29A44312BACA180F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6D5CEDC717B136FB0014EAB1 /* Sources */ = {
@@ -167,6 +389,26 @@
 			files = (
 				6D5CEDDB17B136FB0014EAB1 /* main.m in Sources */,
 				6D5CEDDF17B136FB0014EAB1 /* TWAppDelegate.m in Sources */,
+				6D5CEE0F17B13EB60014EAB1 /* TWRestAPI.m in Sources */,
+				6D5CEE1317B13ECE0014EAB1 /* TWRestDefines.m in Sources */,
+				6D5CEE1717B13F410014EAB1 /* TWRestHTTPClient.m in Sources */,
+				6D5CEE1C17B1900E0014EAB1 /* TWRepo.m in Sources */,
+				6D5CEE2117B199320014EAB1 /* TWParser.m in Sources */,
+				6D5CEE2517B1996A0014EAB1 /* TWRepoCollection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D5CEDEB17B13A640014EAB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D5CEDFA17B13A640014EAB1 /* main.m in Sources */,
+				6D5CEE1017B13EB60014EAB1 /* TWRestAPI.m in Sources */,
+				6D5CEE1417B13ECE0014EAB1 /* TWRestDefines.m in Sources */,
+				6D5CEE1817B13F410014EAB1 /* TWRestHTTPClient.m in Sources */,
+				6D5CEE1D17B1900E0014EAB1 /* TWRepo.m in Sources */,
+				6D5CEE2217B199320014EAB1 /* TWParser.m in Sources */,
+				6D5CEE2617B1996A0014EAB1 /* TWRepoCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +419,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				6D5CEDD817B136FB0014EAB1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6D5CEDF617B13A640014EAB1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D5CEDF717B13A640014EAB1 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -244,6 +494,7 @@
 		};
 		6D5CEDE917B136FB0014EAB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C05377ED74EE40E78F31EAA5 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TravisCIWrapper/TravisCIWrapper-Prefix.pch";
@@ -255,10 +506,61 @@
 		};
 		6D5CEDEA17B136FB0014EAB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C05377ED74EE40E78F31EAA5 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TravisCIWrapper/TravisCIWrapper-Prefix.pch";
 				INFOPLIST_FILE = "TravisCIWrapper/TravisCIWrapper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6D5CEE0517B13A640014EAB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C05377ED74EE40E78F31EAA5 /* Pods.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TravisCIWrapperTests/TravisCIWrapperTests-Prefix.pch";
+				INFOPLIST_FILE = "TravisCIWrapperTests/TravisCIWrapperTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6D5CEE0617B13A640014EAB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C05377ED74EE40E78F31EAA5 /* Pods.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TravisCIWrapperTests/TravisCIWrapperTests-Prefix.pch";
+				INFOPLIST_FILE = "TravisCIWrapperTests/TravisCIWrapperTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -283,6 +585,16 @@
 				6D5CEDEA17B136FB0014EAB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D5CEE0717B13A640014EAB1 /* Build configuration list for PBXNativeTarget "TravisCIWrapperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D5CEE0517B13A640014EAB1 /* Debug */,
+				6D5CEE0617B13A640014EAB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
