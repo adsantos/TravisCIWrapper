@@ -17,7 +17,7 @@
         dateFormatter = [[NSDateFormatter alloc] init];
         NSLocale *enUKLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_UK_POSIX"];
         [dateFormatter setLocale:enUKLocale];
-        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"]; //2013-07-13T23:02:42Z
+        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"]; //2013-07-13T23:02:42Z
     });
     return dateFormatter;
 }
