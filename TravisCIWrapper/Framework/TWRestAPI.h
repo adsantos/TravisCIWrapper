@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TWRestDefines.h"
 
 @interface TWRestAPI : NSObject
+
++ (void)reposFilteredBy:(NSString *)search onSuccess:(SuccessRepoCollection)success onFailure:(FailureBlock)failure;
 
 @end

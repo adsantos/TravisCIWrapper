@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class TWRepoCollection;
+
 @interface TWRestDefines : NSObject
 
 extern NSString * const BASE_URL_STRING;
 
 typedef void (^Success)(void);
+typedef void (^SuccessRepoCollection)(TWRepoCollection *repoCollection);
 typedef void (^FailureBlock)(NSError *);
 
 @end

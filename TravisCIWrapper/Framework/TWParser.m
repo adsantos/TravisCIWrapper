@@ -9,6 +9,7 @@
 #import "TWParser.h"
 #import "TWRepo.h"
 #import "TWRepoCollection.h"
+#import "TWUtils.h"
 
 static const NSString *JSON_DESCRIPTION = @"description";
 static const NSString *JSON_ID = @"id";
@@ -27,10 +28,27 @@ static const NSString *JSON_SLUG = @"slug";
 
 + (TWRepo *)parseRepo:(NSDictionary *)reposDictionary {
     
-//    NSString *description = [reposDictionary objectForKey:JSON_DESCRIPTION];
+    NSString *description = [reposDictionary objectForKey:JSON_DESCRIPTION];
+    int repoId = [[reposDictionary objectForKey:JSON_ID] intValue];
+    int lastBuildDuration = [[reposDictionary objectForKey:JSON_LAST_BUILD_DURATION] intValue];
     
-//    return [[TWRepo alloc] initWithRepoDescription:description repoId:<#(NSInteger)#> lastBuildDuration:<#(NSInteger)#> lastBuildFinishedAt:<#(NSDate *)#> lastBuildId:<#(NSInteger)#> lastBuildLanguage:<#(NSString *)#> lastBuildNumber:<#(NSInteger)#> lastBuildResult:<#(NSInteger)#> lastBuildStartedAt:<#(NSDate *)#> lastBuildStatus:<#(NSInteger)#> slug:<#(NSString *)#>]
-    return nil;
+    NSDateFormatter *dateFormatter = [TWUtils sharedDateFormatter];
+    NSString *lastBuildFinishedAtString = [reposDictionary objectForKey:JSON_LAST_BUILD_FINISHED_AT];
+    NSDate *lastBuildFinishedAt = [dateFormatter dateFromString:lastBuildFinishedAtString];
+    
+    int lastBuildId = [[reposDictionary objectForKey:JSON_LAST_BUILD_ID] intValue];
+    NSString *lastBuildLanguage = [reposDictionary objectForKey:JSON_LAST_BUILD_LANGUAGE];
+    int lastBuildNumber = [[reposDictionary objectForKey:JSON_LAST_BUILD_NUMBER] intValue];
+    int lastBuildResult = [[reposDictionary objectForKey:JSON_LAST_BUILD_RESULT] intValue];
+    
+    NSString *lastBuildStartedAtString = [reposDictionary objectForKey:JSON_LAST_STARTED_AT];
+    NSDate *lastBuildStartedAt = [dateFormatter dateFromString:lastBuildStartedAtString];
+    
+    int lastBuildStatus = [[reposDictionary objectForKey:JSON_LAST_BUILD_STATUS] intValue];
+    
+    NSString *slug = [reposDictionary objectForKey:JSON_SLUG];
+    
+    return [[TWRepo alloc] initWithRepoDescription:description repoId:repoId lastBuildDuration:lastBuildDuration lastBuildFinishedAt:lastBuildFinishedAt lastBuildId:lastBuildId lastBuildLanguage:lastBuildLanguage lastBuildNumber:lastBuildNumber lastBuildResult:lastBuildResult lastBuildStartedAt:lastBuildStartedAt lastBuildStatus:lastBuildStatus slug:slug];
 }
 
 + (TWRepoCollection *)parseRepos:(NSData *)reposData {

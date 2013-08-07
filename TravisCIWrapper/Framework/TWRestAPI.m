@@ -9,6 +9,8 @@
 #import "TWRestAPI.h"
 #import "TWRestDefines.h"
 #import "TWRestHTTPClient.h"
+#import "TWParser.h"
+#import "TWRepoCollection.h"
 
 // End points
 NSString * const GET_REPOS = @"repos";
@@ -25,15 +27,18 @@ NSString * const SEARCH_PARAM = @"search";         //e.g. https://api.travis-ci.
 @implementation TWRestAPI
 
 //e.g.https://api.travis-ci.org/repos?search=wrapper
-+ (void)reposFilteredBy:(NSString *)search onSuccess:(Success)success onFailure:(FailureBlock)failure {
++ (void)reposFilteredBy:(NSString *)search onSuccess:(SuccessRepoCollection)success onFailure:(FailureBlock)failure {
     TWRestHTTPClient *client = [TWRestHTTPClient sharedInstance];
     
     NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithObjects:@[search] forKeys:@[SEARCH_PARAM]];
     
     [client getPath:GET_REPOS parameters:params success:^(AFHTTPRequestOperation *operation, id response) {
         NSString *responseString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-        
-        
+        NSLog(@"reposFilteredBy %@ responseString: %@", search, responseString);
+        if (success) {
+            TWRepoCollection *repoCollection = [TWParser parseRepos:response];
+            success(repoCollection);
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) {
             failure(error);

@@ -37,6 +37,8 @@
 		6D5CEE2217B199320014EAB1 /* TWParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE2017B199320014EAB1 /* TWParser.m */; };
 		6D5CEE2517B1996A0014EAB1 /* TWRepoCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE2417B1996A0014EAB1 /* TWRepoCollection.m */; };
 		6D5CEE2617B1996A0014EAB1 /* TWRepoCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE2417B1996A0014EAB1 /* TWRepoCollection.m */; };
+		6D5CEE2A17B25A840014EAB1 /* TWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE2917B25A840014EAB1 /* TWUtils.m */; };
+		6D5CEE2B17B25A840014EAB1 /* TWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE2917B25A840014EAB1 /* TWUtils.m */; };
 		E9D11346C71849BCB17F62C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32004CC9230D4A9F94CF10D6 /* libPods.a */; };
 		F376210534D54D0E81662040 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5289ED9F43EE436681811220 /* libPods-test.a */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,8 @@
 		6D5CEE2017B199320014EAB1 /* TWParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWParser.m; sourceTree = "<group>"; };
 		6D5CEE2317B1996A0014EAB1 /* TWRepoCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRepoCollection.h; sourceTree = "<group>"; };
 		6D5CEE2417B1996A0014EAB1 /* TWRepoCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRepoCollection.m; sourceTree = "<group>"; };
+		6D5CEE2817B25A840014EAB1 /* TWUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWUtils.h; sourceTree = "<group>"; };
+		6D5CEE2917B25A840014EAB1 /* TWUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUtils.m; sourceTree = "<group>"; };
 		C05377ED74EE40E78F31EAA5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -193,6 +197,7 @@
 		6D5CEE0C17B13E870014EAB1 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				6D5CEE2717B25A780014EAB1 /* Utils */,
 				6D5CEE1E17B199170014EAB1 /* Parser */,
 				6D5CEE1917B18FD40014EAB1 /* Models */,
 				6D5CEE0D17B13EB60014EAB1 /* TWRestAPI.h */,
@@ -223,6 +228,15 @@
 				6D5CEE2017B199320014EAB1 /* TWParser.m */,
 			);
 			name = Parser;
+			sourceTree = "<group>";
+		};
+		6D5CEE2717B25A780014EAB1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6D5CEE2817B25A840014EAB1 /* TWUtils.h */,
+				6D5CEE2917B25A840014EAB1 /* TWUtils.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +409,7 @@
 				6D5CEE1C17B1900E0014EAB1 /* TWRepo.m in Sources */,
 				6D5CEE2117B199320014EAB1 /* TWParser.m in Sources */,
 				6D5CEE2517B1996A0014EAB1 /* TWRepoCollection.m in Sources */,
+				6D5CEE2A17B25A840014EAB1 /* TWUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +424,7 @@
 				6D5CEE1D17B1900E0014EAB1 /* TWRepo.m in Sources */,
 				6D5CEE2217B199320014EAB1 /* TWParser.m in Sources */,
 				6D5CEE2617B1996A0014EAB1 /* TWRepoCollection.m in Sources */,
+				6D5CEE2B17B25A840014EAB1 /* TWUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
