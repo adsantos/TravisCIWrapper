@@ -10,10 +10,13 @@
 
 @class TWRepoCollection;
 @class TWRepoDetails;
+@class TWBuildCollection;
 
 @interface TWParser : NSObject
 
 + (TWRepoCollection *)parseRepos:(NSData *)reposData;
 + (TWRepoDetails *)parseRepoDetails:(NSData *)repoDetailsData;
++ (TWBuildCollection *)parseBuilds:(NSData *)buildsData;
++ (NSString *)extractLogFromJobData:(NSData *)jobData;
 
 @end

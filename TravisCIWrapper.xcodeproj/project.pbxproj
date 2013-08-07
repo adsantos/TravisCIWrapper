@@ -42,6 +42,10 @@
 		6D5CEE3417B260ED0014EAB1 /* TWTestRestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE3317B260ED0014EAB1 /* TWTestRestAPI.m */; };
 		6D5CEE3717B278700014EAB1 /* TWRepoDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE3617B278700014EAB1 /* TWRepoDetails.m */; };
 		6D5CEE3817B278700014EAB1 /* TWRepoDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE3617B278700014EAB1 /* TWRepoDetails.m */; };
+		6D5CEE3B17B286910014EAB1 /* TWBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE3A17B286910014EAB1 /* TWBuild.m */; };
+		6D5CEE3C17B286910014EAB1 /* TWBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE3A17B286910014EAB1 /* TWBuild.m */; };
+		6D5CEE3F17B28DE30014EAB1 /* TWBuildCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE3E17B28DE30014EAB1 /* TWBuildCollection.m */; };
+		6D5CEE4017B28DE30014EAB1 /* TWBuildCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE3E17B28DE30014EAB1 /* TWBuildCollection.m */; };
 		E9D11346C71849BCB17F62C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32004CC9230D4A9F94CF10D6 /* libPods.a */; };
 		F376210534D54D0E81662040 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5289ED9F43EE436681811220 /* libPods-test.a */; };
 /* End PBXBuildFile section */
@@ -89,6 +93,10 @@
 		6D5CEE3317B260ED0014EAB1 /* TWTestRestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTestRestAPI.m; sourceTree = "<group>"; };
 		6D5CEE3517B278700014EAB1 /* TWRepoDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRepoDetails.h; sourceTree = "<group>"; };
 		6D5CEE3617B278700014EAB1 /* TWRepoDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRepoDetails.m; sourceTree = "<group>"; };
+		6D5CEE3917B286910014EAB1 /* TWBuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBuild.h; sourceTree = "<group>"; };
+		6D5CEE3A17B286910014EAB1 /* TWBuild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBuild.m; sourceTree = "<group>"; };
+		6D5CEE3D17B28DE20014EAB1 /* TWBuildCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBuildCollection.h; sourceTree = "<group>"; };
+		6D5CEE3E17B28DE30014EAB1 /* TWBuildCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBuildCollection.m; sourceTree = "<group>"; };
 		C05377ED74EE40E78F31EAA5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -226,6 +234,10 @@
 				6D5CEE2417B1996A0014EAB1 /* TWRepoCollection.m */,
 				6D5CEE3517B278700014EAB1 /* TWRepoDetails.h */,
 				6D5CEE3617B278700014EAB1 /* TWRepoDetails.m */,
+				6D5CEE3917B286910014EAB1 /* TWBuild.h */,
+				6D5CEE3A17B286910014EAB1 /* TWBuild.m */,
+				6D5CEE3D17B28DE20014EAB1 /* TWBuildCollection.h */,
+				6D5CEE3E17B28DE30014EAB1 /* TWBuildCollection.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -420,6 +432,8 @@
 				6D5CEE2517B1996A0014EAB1 /* TWRepoCollection.m in Sources */,
 				6D5CEE2A17B25A840014EAB1 /* TWUtils.m in Sources */,
 				6D5CEE3717B278700014EAB1 /* TWRepoDetails.m in Sources */,
+				6D5CEE3B17B286910014EAB1 /* TWBuild.m in Sources */,
+				6D5CEE3F17B28DE30014EAB1 /* TWBuildCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +451,8 @@
 				6D5CEE2B17B25A840014EAB1 /* TWUtils.m in Sources */,
 				6D5CEE3417B260ED0014EAB1 /* TWTestRestAPI.m in Sources */,
 				6D5CEE3817B278700014EAB1 /* TWRepoDetails.m in Sources */,
+				6D5CEE3C17B286910014EAB1 /* TWBuild.m in Sources */,
+				6D5CEE4017B28DE30014EAB1 /* TWBuildCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
