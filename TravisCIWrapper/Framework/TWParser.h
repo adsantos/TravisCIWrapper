@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @class TWRepoCollection;
+@class TWRepoDetails;
 
 @interface TWParser : NSObject
 
 + (TWRepoCollection *)parseRepos:(NSData *)reposData;
++ (TWRepoDetails *)parseRepoDetails:(NSData *)repoDetailsData;
 
 @end

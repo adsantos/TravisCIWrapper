@@ -12,5 +12,7 @@
 @interface TWRestAPI : NSObject
 
 + (void)reposFilteredBy:(NSString *)search onSuccess:(SuccessRepoCollection)success onFailure:(FailureBlock)failure;
++ (void)reposFromOwnerName:(NSString *)ownerName onSuccess:(SuccessRepoCollection)success onFailure:(FailureBlock)failure;
++ (void)repoDetailsForRepoId:(NSInteger)repoId onSuccess:(SuccessRepoDetails)success onFailure:(FailureBlock)failure;
 
 @end

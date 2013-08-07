@@ -9,6 +9,7 @@
 #import "TWParser.h"
 #import "TWRepo.h"
 #import "TWRepoCollection.h"
+#import "TWRepoDetails.h"
 #import "TWUtils.h"
 
 static const NSString *JSON_DESCRIPTION = @"description";
@@ -22,6 +23,7 @@ static const NSString *JSON_LAST_BUILD_RESULT = @"last_build_result";
 static const NSString *JSON_LAST_STARTED_AT = @"last_build_started_at";
 static const NSString *JSON_LAST_BUILD_STATUS = @"last_build_status";
 static const NSString *JSON_SLUG = @"slug";
+static const NSString *JSON_PUBLIC_KEY = @"public_key";
 
 
 @implementation TWParser
@@ -66,6 +68,16 @@ static const NSString *JSON_SLUG = @"slug";
         [repos addObject:repo];
     }
     return [[TWRepoCollection alloc] initWithRepos:repos];
+}
+
++ (TWRepoDetails *)parseRepoDetails:(NSData *)repoDetailsData {
+    NSError *parseError;
+    NSDictionary *repoDetailsDictionary = [NSJSONSerialization JSONObjectWithData:repoDetailsData options:kNilOptions error:&parseError];
+    TWRepo *repo = [TWParser parseRepo:repoDetailsDictionary];
+    TWRepoDetails *repoDetails = [[TWRepoDetails alloc] initWithRepo:repo];
+    repoDetails.publicKey = [repoDetailsDictionary objectForKey:JSON_PUBLIC_KEY];
+    
+    return repoDetails;
 }
 
 @end
