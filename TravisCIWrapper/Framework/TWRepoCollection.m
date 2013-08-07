@@ -7,6 +7,7 @@
 //
 
 #import "TWRepoCollection.h"
+#import "TWRepo.h"
 
 @implementation TWRepoCollection
 
@@ -16,6 +17,16 @@
         _repos = repos;
     }
     return self;
+}
+
+- (NSString *)description {
+    NSMutableString *result = [[NSMutableString alloc] init];
+    
+    for (TWRepo *repo in self.repos) {
+        [result appendFormat:@"%@\n----------------------------\n", [repo description]];
+    }
+    
+    return result;
 }
 
 @end

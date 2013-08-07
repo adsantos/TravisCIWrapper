@@ -34,4 +34,8 @@
     return self;
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"RepoDescription: %@ \nrepoId: %d \nlastBuildDuration: %d \nlastBuildFinishedAt: %@ \nlastBuildId: %d \nlastBuildLanguage: %@ \nlastBuildNumber: %d \nlastBuildResult: %d \nlastBuildStartedAt: %@ \nlastBuildStatus: %d \nslug: %@", self.repoDescription, self.repoId, self.lastBuildDuration, self.lastBuildFinishedAt, self.lastBuildId, self.lastBuildLanguage, self.lastBuildNumber, self.lastBuildResult, self.lastBuildStartedAt, self.lastBuildStatus, self.slug];
+}
+
 @end
