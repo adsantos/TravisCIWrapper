@@ -39,6 +39,7 @@
 		6D5CEE2617B1996A0014EAB1 /* TWRepoCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE2417B1996A0014EAB1 /* TWRepoCollection.m */; };
 		6D5CEE2A17B25A840014EAB1 /* TWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE2917B25A840014EAB1 /* TWUtils.m */; };
 		6D5CEE2B17B25A840014EAB1 /* TWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE2917B25A840014EAB1 /* TWUtils.m */; };
+		6D5CEE3417B260ED0014EAB1 /* TWTestRestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE3317B260ED0014EAB1 /* TWTestRestAPI.m */; };
 		E9D11346C71849BCB17F62C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32004CC9230D4A9F94CF10D6 /* libPods.a */; };
 		F376210534D54D0E81662040 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5289ED9F43EE436681811220 /* libPods-test.a */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		6D5CEE2417B1996A0014EAB1 /* TWRepoCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRepoCollection.m; sourceTree = "<group>"; };
 		6D5CEE2817B25A840014EAB1 /* TWUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWUtils.h; sourceTree = "<group>"; };
 		6D5CEE2917B25A840014EAB1 /* TWUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWUtils.m; sourceTree = "<group>"; };
+		6D5CEE3317B260ED0014EAB1 /* TWTestRestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTestRestAPI.m; sourceTree = "<group>"; };
 		C05377ED74EE40E78F31EAA5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				6D5CEDF417B13A640014EAB1 /* Supporting Files */,
+				6D5CEE3317B260ED0014EAB1 /* TWTestRestAPI.m */,
 			);
 			path = TravisCIWrapperTests;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				6D5CEE2217B199320014EAB1 /* TWParser.m in Sources */,
 				6D5CEE2617B1996A0014EAB1 /* TWRepoCollection.m in Sources */,
 				6D5CEE2B17B25A840014EAB1 /* TWUtils.m in Sources */,
+				6D5CEE3417B260ED0014EAB1 /* TWTestRestAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

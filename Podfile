@@ -7,6 +7,7 @@ pod 'AFNetworking',     '~> 1.3.1'
 
 target :test do
   link_with 'TravisCIWrapperTests'
+  pod 'NSURLConnectionVCR'
   pod 'GHUnitIOS'
 end
 

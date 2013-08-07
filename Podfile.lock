@@ -1,13 +1,16 @@
 PODS:
   - AFNetworking (1.3.1)
   - GHUnitIOS (0.5.6)
+  - NSURLConnectionVCR (0.0.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 1.3.1)
   - GHUnitIOS
+  - NSURLConnectionVCR
 
 SPEC CHECKSUMS:
   AFNetworking: 9ec8aafb9269236a7630bd8d9838ce2ba30fa2a0
   GHUnitIOS: bf149b2c44084eee2785ce4ac3675c3a699e509d
+  NSURLConnectionVCR: 68fecf6cd8efb5c2ffcec8fb6d7e4e34a8968bb2
 
 COCOAPODS: 0.22.3
