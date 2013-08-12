@@ -8,7 +8,7 @@ An Objective-C wrapper for the Travis-CI API.
 1. Install [CocoaPods](http://cocoapods.org).
 2. Clone this project
 3. In the home directory of this project, run pod install
-4. Open Wrapper.xcworkspace in XCode
+4. Open TravisCIWrapper.xcworkspace in XCode
 
 ## Usage
 
