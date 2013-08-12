@@ -11,6 +11,7 @@
 @class TWRepoCollection;
 @class TWRepoDetails;
 @class TWBuildCollection;
+@class TWBuildDetails;
 
 @interface TWParser : NSObject
 
@@ -18,5 +19,6 @@
 + (TWRepoDetails *)parseRepoDetails:(NSData *)repoDetailsData;
 + (TWBuildCollection *)parseBuilds:(NSData *)buildsData;
 + (NSString *)extractLogFromJobData:(NSData *)jobData;
++ (TWBuildDetails *)parseBuildDetails:(NSData *)buildDetailsData;
 
 @end

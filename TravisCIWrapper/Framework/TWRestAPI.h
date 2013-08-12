@@ -16,5 +16,6 @@
 + (void)repoDetailsForRepoId:(NSInteger)repoId onSuccess:(SuccessRepoDetails)success onFailure:(FailureBlock)failure;
 + (void)buildsForRepoName:(NSString *)repoName andOwner:(NSString *)owner onSuccess:(SuccessBuildCollection)success onFailure:(FailureBlock)failure;
 + (void)logsForJobId:(NSInteger)jobId onSuccess:(SuccessLog)success onFailure:(FailureBlock)failure;
++ (void)buildDetailsForBuild:(NSInteger)buildId onSuccess:(SuccessBuildDetails)success onFailure:(FailureBlock)failure;
 
 @end

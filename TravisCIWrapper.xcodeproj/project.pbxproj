@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D59CD6117B3C32000FE11DE /* TWMatrixItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D59CD6017B3C32000FE11DE /* TWMatrixItem.m */; };
+		6D59CD6217B3C32000FE11DE /* TWMatrixItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D59CD6017B3C32000FE11DE /* TWMatrixItem.m */; };
 		6D5CEDCF17B136FB0014EAB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5CEDCE17B136FB0014EAB1 /* UIKit.framework */; };
 		6D5CEDD117B136FB0014EAB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5CEDD017B136FB0014EAB1 /* Foundation.framework */; };
 		6D5CEDD317B136FB0014EAB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5CEDD217B136FB0014EAB1 /* CoreGraphics.framework */; };
@@ -46,6 +48,10 @@
 		6D5CEE3C17B286910014EAB1 /* TWBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE3A17B286910014EAB1 /* TWBuild.m */; };
 		6D5CEE3F17B28DE30014EAB1 /* TWBuildCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE3E17B28DE30014EAB1 /* TWBuildCollection.m */; };
 		6D5CEE4017B28DE30014EAB1 /* TWBuildCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE3E17B28DE30014EAB1 /* TWBuildCollection.m */; };
+		6D5CEE4317B2C99D0014EAB1 /* TWBuildDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE4217B2C99C0014EAB1 /* TWBuildDetails.m */; };
+		6D5CEE4417B2C99D0014EAB1 /* TWBuildDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE4217B2C99C0014EAB1 /* TWBuildDetails.m */; };
+		6D5CEE4717B398E00014EAB1 /* TWMatrixConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE4617B398E00014EAB1 /* TWMatrixConfig.m */; };
+		6D5CEE4817B398E00014EAB1 /* TWMatrixConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CEE4617B398E00014EAB1 /* TWMatrixConfig.m */; };
 		E9D11346C71849BCB17F62C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32004CC9230D4A9F94CF10D6 /* libPods.a */; };
 		F376210534D54D0E81662040 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5289ED9F43EE436681811220 /* libPods-test.a */; };
 /* End PBXBuildFile section */
@@ -54,6 +60,8 @@
 		32004CC9230D4A9F94CF10D6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9ED187ED5A499AAD7FFDEE /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
 		5289ED9F43EE436681811220 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D59CD5F17B3C32000FE11DE /* TWMatrixItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMatrixItem.h; sourceTree = "<group>"; };
+		6D59CD6017B3C32000FE11DE /* TWMatrixItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMatrixItem.m; sourceTree = "<group>"; };
 		6D5CEDCB17B136FB0014EAB1 /* TravisCIWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravisCIWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5CEDCE17B136FB0014EAB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6D5CEDD017B136FB0014EAB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,6 +105,10 @@
 		6D5CEE3A17B286910014EAB1 /* TWBuild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBuild.m; sourceTree = "<group>"; };
 		6D5CEE3D17B28DE20014EAB1 /* TWBuildCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBuildCollection.h; sourceTree = "<group>"; };
 		6D5CEE3E17B28DE30014EAB1 /* TWBuildCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBuildCollection.m; sourceTree = "<group>"; };
+		6D5CEE4117B2C99C0014EAB1 /* TWBuildDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBuildDetails.h; sourceTree = "<group>"; };
+		6D5CEE4217B2C99C0014EAB1 /* TWBuildDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBuildDetails.m; sourceTree = "<group>"; };
+		6D5CEE4517B398DF0014EAB1 /* TWMatrixConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMatrixConfig.h; sourceTree = "<group>"; };
+		6D5CEE4617B398E00014EAB1 /* TWMatrixConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMatrixConfig.m; sourceTree = "<group>"; };
 		C05377ED74EE40E78F31EAA5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -238,6 +250,12 @@
 				6D5CEE3A17B286910014EAB1 /* TWBuild.m */,
 				6D5CEE3D17B28DE20014EAB1 /* TWBuildCollection.h */,
 				6D5CEE3E17B28DE30014EAB1 /* TWBuildCollection.m */,
+				6D5CEE4117B2C99C0014EAB1 /* TWBuildDetails.h */,
+				6D5CEE4217B2C99C0014EAB1 /* TWBuildDetails.m */,
+				6D5CEE4517B398DF0014EAB1 /* TWMatrixConfig.h */,
+				6D5CEE4617B398E00014EAB1 /* TWMatrixConfig.m */,
+				6D59CD5F17B3C32000FE11DE /* TWMatrixItem.h */,
+				6D59CD6017B3C32000FE11DE /* TWMatrixItem.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -434,6 +452,9 @@
 				6D5CEE3717B278700014EAB1 /* TWRepoDetails.m in Sources */,
 				6D5CEE3B17B286910014EAB1 /* TWBuild.m in Sources */,
 				6D5CEE3F17B28DE30014EAB1 /* TWBuildCollection.m in Sources */,
+				6D5CEE4317B2C99D0014EAB1 /* TWBuildDetails.m in Sources */,
+				6D5CEE4717B398E00014EAB1 /* TWMatrixConfig.m in Sources */,
+				6D59CD6117B3C32000FE11DE /* TWMatrixItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +474,9 @@
 				6D5CEE3817B278700014EAB1 /* TWRepoDetails.m in Sources */,
 				6D5CEE3C17B286910014EAB1 /* TWBuild.m in Sources */,
 				6D5CEE4017B28DE30014EAB1 /* TWBuildCollection.m in Sources */,
+				6D5CEE4417B2C99D0014EAB1 /* TWBuildDetails.m in Sources */,
+				6D5CEE4817B398E00014EAB1 /* TWMatrixConfig.m in Sources */,
+				6D59CD6217B3C32000FE11DE /* TWMatrixItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@
 - (id)initWithRepoDescription:(NSString *)description repoId:(NSInteger)repoId
             lastBuildDuration:(NSInteger)lastBuildDuration lastBuildFinishedAt:(NSDate *)lastBuildFinishedAt
             lastBuildId:(NSInteger)lastBuildId lastBuildLanguage:(NSString *)lastBuildLanguage
-            lastBuildNumber:(NSInteger)lastBuildNumber lastBuildResult:(NSInteger)lastBuildResult
+            lastBuildNumber:(float)lastBuildNumber lastBuildResult:(NSInteger)lastBuildResult
             lastBuildStartedAt:(NSDate *)lastBuildStartedAt lastBuildStatus:(NSInteger)lastBuildStatus
             slug:(NSString *)slug {
     
@@ -35,7 +35,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"RepoDescription: %@ \nrepoId: %d \nlastBuildDuration: %d \nlastBuildFinishedAt: %@ \nlastBuildId: %d \nlastBuildLanguage: %@ \nlastBuildNumber: %d \nlastBuildResult: %d \nlastBuildStartedAt: %@ \nlastBuildStatus: %d \nslug: %@", self.repoDescription, self.repoId, self.lastBuildDuration, self.lastBuildFinishedAt, self.lastBuildId, self.lastBuildLanguage, self.lastBuildNumber, self.lastBuildResult, self.lastBuildStartedAt, self.lastBuildStatus, self.slug];
+    return [NSString stringWithFormat:@"RepoDescription: %@ \nrepoId: %d \nlastBuildDuration: %d \nlastBuildFinishedAt: %@ \nlastBuildId: %d \nlastBuildLanguage: %@ \nlastBuildNumber: %f \nlastBuildResult: %d \nlastBuildStartedAt: %@ \nlastBuildStatus: %d \nslug: %@", self.repoDescription, self.repoId, self.lastBuildDuration, self.lastBuildFinishedAt, self.lastBuildId, self.lastBuildLanguage, self.lastBuildNumber, self.lastBuildResult, self.lastBuildStartedAt, self.lastBuildStatus, self.slug];
 }
 
 @end

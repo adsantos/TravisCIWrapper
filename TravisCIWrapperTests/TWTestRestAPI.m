@@ -15,6 +15,8 @@
 #import "TWBuildCollection.h"
 #import "TWBuild.h"
 #import "TWUtils.h"
+#import "TWBuildDetails.h"
+#import "TWMatrixItem.h"
 
 #define TIMEOUT 10.0
 
@@ -34,11 +36,11 @@
     NSString *folderName = [NSString stringWithFormat:@"%@/cassette",
                             documentsDirectory];
     
-//    [NSURLConnectionVCR startVCRWithPath:folderName error:nil];
+    [NSURLConnectionVCR startVCRWithPath:folderName error:nil];
 }
 
 - (void)tearDownClass {
-//    [NSURLConnectionVCR stopVCRWithError:nil];
+    [NSURLConnectionVCR stopVCRWithError:nil];
 }
 
 - (void)testReposFilteredByWord {
@@ -200,6 +202,79 @@
     [self waitForStatus:kGHUnitWaitStatusSuccess timeout:TIMEOUT];
     GHAssertTrue(didSucceed, @"testLogsForJobId should succeed");
     GHAssertTrue([logBlock length] == 22001, @"The log should have a length of 22001");
+}
+
+- (void)testBuildDetailsForBuild {
+    __block bool didSucceed = NO;
+    __block TWBuildDetails *buildDetailsBlock;
+    [TWRestAPI buildDetailsForBuild:9051686 onSuccess:^(TWBuildDetails *buildDetails) {
+        buildDetailsBlock = buildDetails;
+        didSucceed = YES;
+        [self notify:kGHUnitWaitStatusSuccess forSelector:_cmd];
+    } onFailure:^(NSError *error) {
+        [self notify:kGHUnitWaitStatusSuccess forSelector:_cmd];
+    }];
+    [self prepare];
+    
+    [self waitForStatus:kGHUnitWaitStatusSuccess timeout:TIMEOUT];
+    GHAssertTrue(didSucceed, @"testBuildDetailsForBuild should succeed");
+    GHAssertTrue([[buildDetailsBlock authorEmail] isEqualToString:@"carlosvilhena@gmail.com"], @"The author email should not be %@", [buildDetailsBlock authorEmail]);
+    GHAssertTrue([[buildDetailsBlock authorName] isEqualToString:@"Carlos Vilhena"], @"The author name should not be %@", [buildDetailsBlock authorName]);
+    GHAssertTrue([[buildDetailsBlock branch] isEqualToString:@"master"], @"The branch should not be %@", [buildDetailsBlock branch]);
+    GHAssertTrue([[buildDetailsBlock commit] isEqualToString:@"e3fcdbe04ea98a58df97867ee888ff7aacc563da"], @"The commit should not be %@", [buildDetailsBlock commit]);
+    
+    NSString *committedAtExpectedString = @"2013-07-13T23:01:20Z";
+    NSDateFormatter *dateFormatter = [TWUtils sharedDateFormatter];
+    NSDate *committedAtExpected = [dateFormatter dateFromString:committedAtExpectedString];
+    GHAssertTrue([[buildDetailsBlock committedAt] isEqualToDate:committedAtExpected], @"The committed date should be %@ instead of %@", committedAtExpected, [buildDetailsBlock committedAt]);
+    
+    GHAssertTrue([[buildDetailsBlock committerEmail] isEqualToString:@"carlosvilhena@gmail.com"], @"");
+    GHAssertTrue([[buildDetailsBlock committerName] isEqualToString:@"Carlos Vilhena"], @"");
+    GHAssertTrue([[[buildDetailsBlock compareUrl] absoluteString] isEqualToString:@"https://github.com/carvil/www-4clojure/compare/063f22ef5072...e3fcdbe04ea9"], @"");
+    GHAssertTrue([buildDetailsBlock config] != nil, @"");
+    GHAssertTrue([[[buildDetailsBlock config] result] isEqualToString:@"configured"], @"");
+    GHAssertTrue([[[buildDetailsBlock config] language] isEqualToString:@"clojure"], @"");
+    GHAssertTrue([[[buildDetailsBlock config] lein] isEqualToString:@"lein2"], @"");
+    GHAssertTrue([[[buildDetailsBlock config] script] isEqualToString:@"lein2 midje"], @"");
+    GHAssertTrue([buildDetailsBlock duration] == 80, @"");
+    GHAssertTrue([[buildDetailsBlock eventType] isEqualToString:@"push"], @"");
+    
+    NSDate *finishedAtExpected = [dateFormatter dateFromString:@"2013-07-13T23:02:45Z"];
+    GHAssertTrue([[buildDetailsBlock finishedAt] isEqualToDate:finishedAtExpected], @"The finished date should be %@ instead of %@", finishedAtExpected, [buildDetailsBlock finishedAt]);
+    
+    GHAssertTrue([buildDetailsBlock buildId] == 9051686, @"");
+    NSArray *matrix = [buildDetailsBlock matrix];
+    GHAssertTrue([matrix count] == 2, @"");
+    
+    TWMatrixItem *matrixItem = [matrix objectAtIndex:0];
+    TWMatrixConfig *matrixConfig = [matrixItem config];
+    
+    GHAssertTrue([matrixItem allowFailure] == NO, @"");
+    GHAssertTrue([[matrixConfig result] isEqualToString:@"configured"], @"");
+    GHAssertTrue([[matrixConfig jdk] count] == 1, @"");
+    GHAssertTrue([[matrixConfig language] isEqualToString:@"clojure"], @"The matrix config language should not be %@", [matrixConfig language]);
+    GHAssertTrue([[matrixConfig lein] isEqualToString:@"lein2"], @"");
+    GHAssertTrue([[matrixConfig script] isEqualToString:@"lein2 midje"], @"");
+    
+    NSDate *finishedAtMatrixExpected = [dateFormatter dateFromString:@"2013-07-13T23:02:42Z"];
+    GHAssertTrue([[matrixItem finishedAt] isEqualToDate:finishedAtMatrixExpected], @"The matrix item finished at should be %@ instead of %@", finishedAtExpected, [matrixItem finishedAt]);
+    GHAssertTrue([matrixItem buildId] == 9051687, @"");
+    float expectedNumber = 35.1;
+    GHAssertTrue([matrixItem number] == expectedNumber, @"");
+    GHAssertTrue([matrixItem repoId] == 375621, @"");
+    GHAssertTrue([matrixItem result] == 0, @"");
+    NSDate *startedAtExpected = [dateFormatter dateFromString:@"2013-07-13T23:02:03Z"];
+    GHAssertTrue([[matrixItem startedAt] isEqualToDate:startedAtExpected], @"");
+    
+    GHAssertTrue([[buildDetailsBlock message] isEqualToString:@"solution for problem 56"], @"");
+    GHAssertTrue([buildDetailsBlock buildNumber] == 35, @"");
+    GHAssertTrue([buildDetailsBlock repoId] == 375621, @"");
+    GHAssertTrue([buildDetailsBlock result] == 0, @"");
+    
+    
+    GHAssertTrue([[buildDetailsBlock startedAt] isEqualToDate:startedAtExpected], @"The started date should be %@ instead of %@", startedAtExpected, [buildDetailsBlock startedAt]);
+    GHAssertTrue([[buildDetailsBlock state] isEqualToString:@"finished"], @"");
+    GHAssertTrue([buildDetailsBlock status] == 0, @"");
 }
 
 @end

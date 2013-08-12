@@ -10,7 +10,7 @@
 
 @implementation TWBuild
 
-- (id)initWithBranch:(NSString *)branch commit:(NSString *)commit duration:(NSInteger)duration eventType:(NSString *)eventType finishedAt:(NSDate *)finishedAt buildId:(NSInteger)buildId message:(NSString *)message buildNumber:(NSInteger)buildNumber repoId:(NSInteger)repoId result:(NSInteger)result startedAt:(NSDate *)startedAt state:(NSString *)state {
+- (id)initWithBranch:(NSString *)branch commit:(NSString *)commit duration:(NSInteger)duration eventType:(NSString *)eventType finishedAt:(NSDate *)finishedAt buildId:(NSInteger)buildId message:(NSString *)message buildNumber:(float)buildNumber repoId:(NSInteger)repoId result:(NSInteger)result startedAt:(NSDate *)startedAt state:(NSString *)state {
     self = [super init];
     if (self) {
         _branch = branch;
@@ -30,7 +30,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"branch: %@ \ncommit: %@ \nduration: %d \neventType: %@ \nfinishedAt: %@ \nbuildId: %d \nmessage: %@ \nbuildNumber: %d \nrepoId: %d \nresult: %d \nstartedAt: %@ \nstate: %@", self.branch, self.commit, self.duration, self.eventType, self.finishedAt, self.buildId, self.message, self.buildNumber, self.repoId, self.result, self.startedAt, self.state];
+    return [NSString stringWithFormat:@"branch: %@ \ncommit: %@ \nduration: %d \neventType: %@ \nfinishedAt: %@ \nbuildId: %d \nmessage: %@ \nbuildNumber: %f \nrepoId: %d \nresult: %d \nstartedAt: %@ \nstate: %@", self.branch, self.commit, self.duration, self.eventType, self.finishedAt, self.buildId, self.message, self.buildNumber, self.repoId, self.result, self.startedAt, self.state];
 }
 
 @end

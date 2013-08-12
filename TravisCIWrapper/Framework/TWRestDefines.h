@@ -11,12 +11,14 @@
 @class TWRepoCollection;
 @class TWRepoDetails;
 @class TWBuildCollection;
+@class TWBuildDetails;
 
 @interface TWRestDefines : NSObject
 
 extern NSString * const BASE_URL_STRING;
 
 typedef void (^Success)(void);
+typedef void (^SuccessBuildDetails)(TWBuildDetails *buildDetails);
 typedef void (^SuccessLog)(NSString *log);
 typedef void (^SuccessRepoCollection)(TWRepoCollection *repoCollection);
 typedef void (^SuccessRepoDetails)(TWRepoDetails *repoDetails);

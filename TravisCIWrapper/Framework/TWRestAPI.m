@@ -12,12 +12,14 @@
 #import "TWParser.h"
 #import "TWRepoCollection.h"
 #import "TWBuildCollection.h"
+#import "TWBuildDetails.h"
 
 // End points
 NSString * const GET_REPOS = @"repos";
 NSString * const GET_REPO_DETAILS = @"repos/{repoId}";
 NSString * const GET_BUILDS_FOR_REPO = @"repos/{owner}/{repoName}/builds";
 NSString * const GET_BUILDS = @"builds";
+NSString * const GET_BUILD_DETAILS = @"builds/{buildId}";
 NSString * const GET_JOBS = @"jobs";
 NSString * const GET_JOBS_FOR_BUILD = @"jobs/{jobId}";
 
@@ -26,6 +28,7 @@ NSString * const REPO_ID = @"{repoId}";
 NSString * const REPO_NAME = @"{repoName}";
 NSString * const OWNER = @"{owner}";
 NSString * const JOB_ID = @"{jobId}";
+NSString * const BUILD_ID = @"{buildId}";
 
 //Search builds: https://api.travis-ci.org/builds/7928968
 //Search jobs: https://api.travis-ci.org/jobs/7928969
@@ -103,13 +106,31 @@ NSString * const SEARCH_PARAM = @"search";         //e.g. https://api.travis-ci.
 //e.g. https://api.travis-ci.org/jobs/9051687
 + (void)logsForJobId:(NSInteger)jobId onSuccess:(SuccessLog)success onFailure:(FailureBlock)failure {
     TWRestHTTPClient *client = [TWRestHTTPClient sharedInstance];
-    //GET_JOBS_FOR_BUILD
+    
     NSString *path = [GET_JOBS_FOR_BUILD stringByReplacingOccurrencesOfString:JOB_ID withString:[NSString stringWithFormat:@"%d", jobId]];
     
     [client getPath:path parameters:nil success:^(AFHTTPRequestOperation *operation, id response) {
         if (success) {
             NSString *log = [TWParser extractLogFromJobData:response];
             success(log);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
+//e.g. https://api.travis-ci.org/builds/9051686
++ (void)buildDetailsForBuild:(NSInteger)buildId onSuccess:(SuccessBuildDetails)success onFailure:(FailureBlock)failure {
+    TWRestHTTPClient *client = [TWRestHTTPClient sharedInstance];
+    
+    NSString *path = [GET_BUILD_DETAILS stringByReplacingOccurrencesOfString:BUILD_ID withString:[NSString stringWithFormat:@"%d", buildId]];
+    
+    [client getPath:path parameters:nil success:^(AFHTTPRequestOperation *operation, id response) {
+        if (success) {
+            TWBuildDetails *buildDetails = [TWParser parseBuildDetails:response];
+            success(buildDetails);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) {
