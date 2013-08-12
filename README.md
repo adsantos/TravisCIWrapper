@@ -49,4 +49,4 @@ iOS 5+
 
 ## Copyright
 
-Copyright (c) 2012 Adriana Santos. See [LICENSE](https://github.com/adsantos/TravisCIWrapper/blob/master/LICENSE) for details.
+Copyright (c) 2013 Adriana Santos. See [LICENSE](https://github.com/adsantos/TravisCIWrapper/blob/master/LICENSE) for details.
