@@ -80,6 +80,16 @@ static const NSString *JSON_ALLOW_FAILURE = @"allow_failure";
     return [object floatValue];
 }
 
++ (id)objectIfNotNull:(id)object {
+    if (object == nil
+        || [object isKindOfClass:[NSNull class]]
+        || ([object respondsToSelector:@selector(length)] && [(NSData *)object length] == 0)
+        || ([object respondsToSelector:@selector(count)]  && [(NSArray *)object count] == 0)) {
+        return nil;
+    }
+    return object;
+}
+
 + (TWRepo *)parseRepo:(NSDictionary *)repoDictionary {
     
     NSString *description = [repoDictionary objectForKey:JSON_DESCRIPTION];
@@ -87,7 +97,7 @@ static const NSString *JSON_ALLOW_FAILURE = @"allow_failure";
     int lastBuildDuration = [TWParser intValueIfNotNull:[repoDictionary objectForKey:JSON_LAST_BUILD_DURATION]];
     
     NSDateFormatter *dateFormatter = [TWUtils sharedDateFormatter];
-    NSString *lastBuildFinishedAtString = [repoDictionary objectForKey:JSON_LAST_BUILD_FINISHED_AT];
+    NSString *lastBuildFinishedAtString = [TWParser objectIfNotNull:[repoDictionary objectForKey:JSON_LAST_BUILD_FINISHED_AT]];
     NSDate *lastBuildFinishedAt = [dateFormatter dateFromString:lastBuildFinishedAtString];
     
     int lastBuildId = [[repoDictionary objectForKey:JSON_LAST_BUILD_ID] intValue];
@@ -95,7 +105,7 @@ static const NSString *JSON_ALLOW_FAILURE = @"allow_failure";
     int lastBuildNumber = [TWParser intValueIfNotNull:[repoDictionary objectForKey:JSON_LAST_BUILD_NUMBER]];
     int lastBuildResult = [TWParser intValueIfNotNull:[repoDictionary objectForKey:JSON_LAST_BUILD_RESULT]];
     
-    NSString *lastBuildStartedAtString = [repoDictionary objectForKey:JSON_LAST_STARTED_AT];
+    NSString *lastBuildStartedAtString = [TWParser objectIfNotNull:[repoDictionary objectForKey:JSON_LAST_STARTED_AT]];
     NSDate *lastBuildStartedAt = [dateFormatter dateFromString:lastBuildStartedAtString];
     
     float lastBuildStatus = [TWParser floatValueIfNotNull:[repoDictionary objectForKey:JSON_LAST_BUILD_STATUS]];
@@ -147,7 +157,7 @@ static const NSString *JSON_ALLOW_FAILURE = @"allow_failure";
     float buildNumber = [TWParser floatValueIfNotNull:[buildDictionary objectForKey:JSON_NUMBER]];
     int repositoryId = [TWParser intValueIfNotNull:[buildDictionary objectForKey:JSON_REPOSITORY_ID]];
     int result = [TWParser intValueIfNotNull:[buildDictionary objectForKey:JSON_RESULT]];
-    NSString *startedAtString = [buildDictionary objectForKey:JSON_STARTED_AT];
+    NSString *startedAtString = [TWParser objectIfNotNull:[buildDictionary objectForKey:JSON_STARTED_AT]];
     NSDate *startedAt = [dateFormatter dateFromString:startedAtString];
     NSString *state = [buildDictionary objectForKey:JSON_STATE];
     
@@ -202,14 +212,14 @@ static const NSString *JSON_ALLOW_FAILURE = @"allow_failure";
 + (TWMatrixItem *)parseMatrixItem:(NSDictionary *)matrixItemDict {
     BOOL allowFailure = [[matrixItemDict objectForKey:JSON_ALLOW_FAILURE] isEqual:@"true"] ? YES : NO;
     TWMatrixConfig *matrixConfig = [TWParser parseConfig:[matrixItemDict objectForKey:JSON_CONFIG]];
-    NSString *finishedAtString = [matrixItemDict objectForKey:JSON_FINISHED_AT];
+    NSString *finishedAtString = [TWParser objectIfNotNull:[matrixItemDict objectForKey:JSON_FINISHED_AT]];
     NSDateFormatter *dateFormatter = [TWUtils sharedDateFormatter];
     NSDate *finishedAt = [dateFormatter dateFromString:finishedAtString];
     int buildId = [TWParser intValueIfNotNull:[matrixItemDict objectForKey:JSON_ID]];
     float buildNumber = [TWParser floatValueIfNotNull:[matrixItemDict objectForKey:JSON_NUMBER]];
     int repoId = [TWParser intValueIfNotNull:[matrixItemDict objectForKey:JSON_REPOSITORY_ID]];
     int result = [TWParser intValueIfNotNull:[matrixItemDict objectForKey:JSON_RESULT]];
-    NSString *startedAtString = [matrixItemDict objectForKey:JSON_STARTED_AT];
+    NSString *startedAtString = [TWParser objectIfNotNull:[matrixItemDict objectForKey:JSON_STARTED_AT]];
     NSDate *startedAt = [dateFormatter dateFromString:startedAtString];
     
     return [[TWMatrixItem alloc] initWithAllowFailure:allowFailure config:matrixConfig finishedAt:finishedAt buildId:buildId number:buildNumber repoId:repoId result:result startedAt:startedAt];
@@ -237,7 +247,7 @@ static const NSString *JSON_ALLOW_FAILURE = @"allow_failure";
     NSString *authorName = [json objectForKey:JSON_AUTHOR_NAME];
     NSString *branch = [json objectForKey:JSON_BRANCH];
     NSString *commit = [json objectForKey:JSON_COMMIT];
-    NSString *committedAtString = [json objectForKey:JSON_COMMITED_AT];
+    NSString *committedAtString = [TWParser objectIfNotNull:[json objectForKey:JSON_COMMITED_AT]];
     NSDateFormatter *dateFormatter = [TWUtils sharedDateFormatter];
     NSDate *committedAt = [dateFormatter dateFromString:committedAtString];
     
@@ -249,7 +259,7 @@ static const NSString *JSON_ALLOW_FAILURE = @"allow_failure";
     
     int duration = [TWParser intValueIfNotNull:[json objectForKey:JSON_DURATION]];
     NSString *eventType = [json objectForKey:JSON_EVENT_TYPE];
-    NSString *finishedAtString = [json objectForKey:JSON_FINISHED_AT];
+    NSString *finishedAtString = [TWParser objectIfNotNull:[json objectForKey:JSON_FINISHED_AT]];
     NSDate *finishedAt = [dateFormatter dateFromString:finishedAtString];
     int buildId = [TWParser intValueIfNotNull:[json objectForKey:JSON_ID]];
     
@@ -260,7 +270,7 @@ static const NSString *JSON_ALLOW_FAILURE = @"allow_failure";
     float buildNumber = [TWParser floatValueIfNotNull:[json objectForKey:JSON_NUMBER]];
     int repoId = [TWParser intValueIfNotNull:[json objectForKey:JSON_REPOSITORY_ID]];
     int result = [TWParser intValueIfNotNull:[json objectForKey:JSON_RESULT]];
-    NSString *startedAtString = [json objectForKey:JSON_STARTED_AT];
+    NSString *startedAtString = [TWParser objectIfNotNull:[json objectForKey:JSON_STARTED_AT]];
     NSDate *startedAt = [dateFormatter dateFromString:startedAtString];
     NSString *state = [json objectForKey:JSON_STATE];
     int status = [TWParser intValueIfNotNull:[json objectForKey:JSON_STATUS]];
