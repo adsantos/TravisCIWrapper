@@ -106,7 +106,7 @@ static const NSString *JSON_ALLOW_FAILURE = @"allow_failure";
 }
 
 + (TWRepoCollection *)parseRepos:(NSData *)reposData {
-    if ([reposData length] == 0) {
+    if ([reposData isKindOfClass:[NSNull class]] || [reposData length] == 0) {
         return nil;
     }
     
@@ -157,7 +157,7 @@ static const NSString *JSON_ALLOW_FAILURE = @"allow_failure";
 }
 
 + (TWBuildCollection *)parseBuilds:(NSData *)buildsData {
-    if ([buildsData length] == 0) {
+    if ([buildsData isKindOfClass:[NSNull class]] || [buildsData length] == 0) {
         return nil;
     }
     
@@ -174,7 +174,7 @@ static const NSString *JSON_ALLOW_FAILURE = @"allow_failure";
 }
 
 + (NSString *)extractLogFromJobData:(NSData *)jobData {
-    if ([jobData length] == 0) {
+    if ([jobData isKindOfClass:[NSNull class]] || [jobData length] == 0) {
         return nil;
     }
     
@@ -226,7 +226,7 @@ static const NSString *JSON_ALLOW_FAILURE = @"allow_failure";
 }
 
 + (TWBuildDetails *)parseBuildDetails:(NSData *)buildDetailsData {
-    if ([buildDetailsData length] == 0) {
+    if ([buildDetailsData isKindOfClass:[NSNull class]] || [buildDetailsData length] == 0) {
         return nil;
     }
     

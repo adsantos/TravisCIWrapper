@@ -54,6 +54,10 @@ NSString * const SEARCH_PARAM = @"search";         //e.g. https://api.travis-ci.
     }];
 }
 
++ (void)allReposOnSuccess:(SuccessRepoCollection)success onFailure:(FailureBlock)failure {
+    [TWRestAPI reposFilteredWithParams:nil onSuccess:success onFailure:failure];
+}
+
 //e.g. https://api.travis-ci.org/repos?search=wrapper
 + (void)reposFilteredBy:(NSString *)search onSuccess:(SuccessRepoCollection)success onFailure:(FailureBlock)failure {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithObjects:@[search] forKeys:@[SEARCH_PARAM]];
