@@ -9,7 +9,6 @@ Pod::Spec.new do |s|
   s.description = 'An Objective-C Travis-CI Wrapper.'
   s.platform = :ios
   s.source_files = 'TravisCIWrapper/Framework/**/*.{h,m}'
-  s.clean_paths   = 'TravisCIWrapper.xcodeproj'
   s.dependency 'AFNetworking', '~> 0.10.0'
   s.framework = 'SystemConfiguration'
   s.requires_arc = true
